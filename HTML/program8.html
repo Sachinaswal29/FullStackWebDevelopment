@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="connect.php" method="post">
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="name"> Full name:</label>
+            <input type="text" id="name" name="fname" placeholder="Enter your name">
+            <br><br>
+            <label for="date">Birth date:</label>
+            <input type="date" id="date" name="dob">
+            <br><br>
+
+            Gender: Male<input type="radio" name="myGender">
+            Female<input type="radio" name="myGender">
+            other<input type="radio" name="myGender">
+            <br><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="addr">
+            <br><br>
+            <label for="Pno">Phone number:</label>
+            <input type="number" id="Pno" name="phone">
+        </fieldset><br>
+        <!-- <fieldset> -->
+        <!-- <legend>Extra Information</legend>
+            interest:<input type="checkbox">Books
+            <input type="checkbox">Movies
+            <input type="checkbox">Videogames<br>
+            Favorite color: <input type="color">
+        </fieldset><br> -->
+        <input type="submit" value="Submit Now">
+        <input type="reset" value="Reset Now">
+    </form>
+</body>
+
+</html>
