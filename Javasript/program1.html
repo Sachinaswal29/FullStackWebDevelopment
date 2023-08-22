@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Credit Card Validator</title>
+    <script>
+        function validateCard() {
+            var cardNum = document.getElementById("cardNum").value;
+            var valid = false;
+
+            if (/^5[1-5]\d{14}$/.test(cardNum)) { // Mastercard
+                valid = true;
+            } else if (/^4(\d{12}|\d{15})$/.test(cardNum)) { // Visa
+                valid = true;
+            } else if (/^3[47]\d{13}$/.test(cardNum)) { // American Express
+                valid = true;
+            }
+
+            if (valid) {
+                alert("Credit card number is valid!");
+            } else {
+                alert("Invalid credit card number.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Credit Card Validator💳</h1>
+        <label for="cardNum">Enter your credit card number:</label><br>
+        👉<input type="text" id="cardNum" name="cardNum">
+        <input type="button" value="Submit" onclick="validateCard()">
+</body>
+
+</html> 
