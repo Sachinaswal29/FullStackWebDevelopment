@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <script type="text/javascript">
+        function validateForm() {
+            var name = document.forms["registration"]["name"].value;
+            var password = document.forms["registration"]["password"].value;
+            var email = document.forms["registration"]["email"].value;
+            var nameRegex = /^[a-zA-Z]+$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.length < 6 || !nameRegex.test(name)) {
+                alert("Name should contain only alphabets and be at least 6 characters long.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password should be at least 6 characters long.");
+                return false;
+            }
+
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="registration" onsubmit="return validateForm()">
+        <div style="background-color: aqua;width: fit-content;">
+            <label for="name">Name:👉</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="password">Password:🔑</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="email">E-mail:📧</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+
+</html>
